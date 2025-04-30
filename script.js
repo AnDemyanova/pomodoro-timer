@@ -26,7 +26,7 @@ function startTimer() {
                 clearInterval(timer);
                 resetTimer();
             }
-        }, 1000);
+        }, 10);
     } else {
         stopTimer();
     }
@@ -41,11 +41,10 @@ function stopTimer() {
 
 
 function resetTimer() {
-    clearInterval(timer);
     timeLeft = 25 * 60;
     updateDisplay();
-    isRunning = false;
-    startButton.textContent = 'start';
+    stopTimer();
+
 }
 
 
